@@ -1,0 +1,48 @@
+users table 
+$table->id('user_id');
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('email')->unique();
+            $table->date('dob');
+            $table->string('mobile_number', 15); 
+            $table->string('password');
+            $table->unsignedBigInteger('country_id');
+            $table->unsignedBigInteger('state_id');
+            $table->unsignedBigInteger('city_id');
+            $table->string('locality');
+            $table->string('pincode',8);
+
+            
+            $table->foreign('country_id')->references('country_id')->on('country')->onDelete('cascade');
+            $table->foreign('city_id')->references('city_id')->on('city')->onDelete('cascade');
+            $table->foreign('state_id')->references('state_id')->on('state')->onDelete('cascade');
+
+            $table->timestamps();
+
+country table
+ $table->id('country_id');
+            $table->timestamps();
+            $table->string('country_name');
+
+city table
+ $table->id('city_id');
+            $table->timestamps();
+            $table->string('city_name');
+            $table->unsignedBigInteger('state_id');
+
+
+            $table->foreign('state_id')->references('state_id')->on('state')->onDelete('cascade');
+
+state table
+ $table->id('state_id');
+            $table->timestamps();
+            $table->string('state_name');
+            $table->unsignedBigInteger('country_id');
+
+            $table->foreign('country_id')->references('country_id')->on('country')->onDelete('cascade');
+
+
+
+
+
+            Route::get('/displaypage', [AuthController::class, 'displayPage'])->middleware('auth');
