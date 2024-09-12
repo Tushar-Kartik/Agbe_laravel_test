@@ -16,16 +16,16 @@
         <h3>Displaying data from the database</h3>
 
         <div class="table-container">
-        <table id="datatable" class="display">
+            <table id="datatable" class="display">
             <thead>
-                <tr align="left">
-                    <th>id</th>
-                    <th data-sortable="true">city</th>
-                    <!-- <th data-sortable="false">state</th>
-                    <th data-sortable="false">city</th> -->
+                <tr>
+                    
+                    <th>City</th>
+                    <th>state</th>
+                    <th>Country</th>
+
                 </tr>
             </thead>
-            <tbody></tbody>
         </table>
         </div>
     </div>
@@ -40,15 +40,12 @@
         processing: true,
         serverSide: true,
         order: [[ 0, "desc" ]],
-        ajax: "{{ url('users-data') }}",
+        ajax: "{{ url('city_data') }}",
         columns: [
-            { data: 'city_id' },
-            { data: 'city_name' },
-         
-            // { data: 'country' },
-            // { data: 'state' },
-            // { data: 'city' }
-
+            // { data: 'city_id' },
+            { data: 'city' },
+            { data: 'state' },
+            { data: 'country' },
         ]
     });
 });

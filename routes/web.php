@@ -18,7 +18,9 @@ Route::post('/login',[AuthController::class,'login']);
 Route::get('/displaypage', [AuthController::class, 'displayPage']);
 
 Route::get('/users', [DisplayRecordController::class, 'index']);
-Route::get('/users-data', [DisplayRecordController::class, 'getData']);
+// Route::get('/users-data', [DisplayRecordController::class, 'getData']);
+Route::get('/city_data', [DisplayRecordController::class, 'getData']);
+
 
 
 // Route::get('/register/states', [app_function_controller::class, 'showStates']);
