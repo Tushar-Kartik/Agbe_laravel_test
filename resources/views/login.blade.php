@@ -6,7 +6,7 @@
 @endpush
 
 @section('content')
-<div class="container">
+<div class="fullbody">
     <div class="form-container">
         <form action="/login" method="POST">
             @csrf

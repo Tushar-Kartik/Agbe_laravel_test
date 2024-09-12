@@ -2,44 +2,31 @@
     margin: 0;
     padding: 0;
 }
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
 .navbar{
     width: 100%;
-    height: 100px;
-    /* border: 2px solid rgb(32, 52, 2); */
-    background-color: rgb(43, 115, 42);
+    height: 80px;
+    background-color: rgb(57, 104, 151);
 }
-.nav-container{
-    width: 100vw;
-    height: 100vh;
-    /* border: 5px solid red; */
-    /* background-image: url("../images/bg2.jpg"); */
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-position: center center
-}
-nav{
-    width: 100vw;
-    height: 60px;
-    border: 2px solid black;
- 
-}
+
+
 nav ul{
     display: flex;
-    /* justify-content: space-around; */
     list-style-type: none;
-    margin-top: 15px;
 }
 nav ul li{
-    font-size: 30px;
+    font-size: 15px;
     padding-left: 30px;
-    margin-top: 20px;
+    margin-top: 30px;
     text-decoration: none;
-    
-
 }
 a{
     text-decoration: none;
-    color: black;
-    border: 2px solid black;
-    padding: 5px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 10px 10px 20px rgba(42, 54, 86, 0.551);
+    border-radius: 10px;
+    padding: 8px;
 }

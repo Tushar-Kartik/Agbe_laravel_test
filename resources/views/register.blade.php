@@ -8,58 +8,61 @@
 
 
 @section('content')
-<div class="form-container">
 
-    <form action="/store_data" method="POST">
-        @csrf
-        <label for="fname">FIRST NAME</label>
-        <input type="text" name="fname">
+<div class="fullbody">
+    <div class="form-container">
+        <form action="/store_data" method="POST">
+            @csrf
+            <div class="form-column">
+                <label for="fname">FIRST NAME</label>
+                <input type="text" name="fname">
 
-        <label for="lname">LAST NAME</label>
-        <input type="text" name="lname">
-        
-        <label for="email">Email</label>
-        <input type="email" name="email">
+                <label for="lname">LAST NAME</label>
+                <input type="text" name="lname">
+                
+                <label for="email">Email</label>
+                <input type="email" name="email">
 
-        <label for="dob">Date of Birth</label>
-        <input type="date" id="dob" name="dob">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
 
+                <label for="mobile">Mobile Number</label>
+                <input type="tel" name="mobile">
 
-        <label for="mobile">Mobile Number</label>
-        <input type="tel" name="mobile" >
+                <label for="password">Password</label>
+                <input type="password" name="password">
+            </div>
+            <div class="form-column">
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option value="">Select Country</option>
+                    @foreach($countries as $id => $name)
+                        <option value="{{ $id }}">{{ $name }}</option>
+                    @endforeach
+                </select>
 
-        <label for="password">Password</label>
-        <input type="password" name="password">
+                <label for="state">State</label>
+                <select name="state" id="state">
+                    <option value="">Select State</option>
+                </select>
 
-        <label for="country">Country</label>
-            <select name="country" id="country">
-                <option value="">Select Country</option>
-                @foreach($countries as $id => $name)
-                    <option value="{{ $id }}">{{ $name }}</option>
-                @endforeach
-            </select>
+                <label for="city">City</label>
+                <select name="city" id="city">
+                    <option value="">Select city</option>
+                </select>
 
-        <label for="state">State</label>
-        <select name="state" id="state">
-            <option value="">Select State</option>
-        </select>
+                <label for="locality">Locality</label>
+                <input type="text" name="locality">
 
-        <label for="city">City</label>
-        <select name="city" id="city">
-        <option value="">Select city</option>
-        </select>
+                <label for="pincode">Pincode</label>
+                <input type="number" name="pincode">
 
-        <label for="locality">Locality</label>
-        <input type="text" name="locality">
-
-        <label for="pincode">Pincode</label>
-        <input type="number" name="pincode">
-
-        <button type="submit">Submit</button>
-
-    </form>
-
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
 </div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
      $(document).ready(function() {

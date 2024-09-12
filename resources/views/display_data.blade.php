@@ -11,26 +11,29 @@
     <script src="{{ asset('js/jquery.dataTables.js')}}"></script>
 </head>
 <body>
+<div class="heading">
+<h1>DISPLAYING DATA FROM DATABASE</h1>
+</div>
 <div class="main">
-    <div class="container">
-        <h3>Displaying data from the database</h3>
 
+    <div class="container">
+        
+       
         <div class="table-container">
             <table id="datatable" class="display">
-            <thead>
-                <tr>
-                    
-                    <th>City</th>
-                    <th>state</th>
-                    <th>Country</th>
-
-                </tr>
-            </thead>
-        </table>
+                <thead>
+                    <tr> 
+                        <th>City</th>
+                        <th>state</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+            </table>
         </div>
     </div>
-
 </div>
+
+    
 
 
 </body>
